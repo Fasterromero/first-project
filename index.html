@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<body>
+    
+    <h1>HOSTAINER</h1>
+
+    <h3>A new hostel in Patagonia, Argentina.</h3>
+
+<div class="divInfo">
+    <button type="button" class="buttonInfo" id="location" onclick="window.open('https://www.google.com.ar/maps/place/Lago+Puelo,+Chubut/@-42.1435401,-71.7064408,11.23z/data=!4m7!3m6!1s0x961beb6dab21611d:0x721c5da902c617e1!8m2!3d-42.061269!4d-71.5971258!14m1!1BCgIgAQ')">Location</buton>
+    <button class="buttonInfo"  onclick="alert('+54 011111111')">Phone Number</button>
+    <button class="buttonInfo"  onclick="alert('hostainer@hostainer.com')">Mail</button>
+</div>
+
+    <p id="invitation">Come with us to enjoy the nature. We have 5 shared rooms, and 5 private rooms, you can chooce the best one for your needs.
+        <br>All reservations includes <strong><em>free breakfast</em></strong> and unlimited <b><em>Wi-Fi!</em></b>
+    </p>
+    
+    <a href="https://media-cdn.tripadvisor.com/media/photo-s/07/a6/05/be/container-hostel-in-bangkok.jpg">
+        <img class="imagen" src="https://media-cdn.tripadvisor.com/media/photo-s/07/a6/05/be/container-hostel-in-bangkok.jpg"/>
+    </a>
+    
+
+<form name="reservationForm" id="reservationForm">
+
+    <div id="tittleForm">Make your reservation:</div>
+
+    <table class="userForm">
+
+    <tr class="trForm">
+
+        <td class="tdForm">First name:</td>
+        <td><input type="text" name="firstName" id="firstName" onblur="validateFirstName()" required><br></td>
+        <td class="name"><span id="namePrompt"></span></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">Last name:</td>
+        <td><input type="text" name="lastName" id="lastName" onblur="validateLastName()" required><br></td>
+        <td class="lastName"><span id="lastNamePrompt"></span></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">Phone number:</td>
+        <td><input type="number" name="phoneNumber" id="phoneNumber" value=""><br></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">Email adress:</td>
+        <td><input type="text" name="emailAdress" id="emailAdress" placeholder="xxxxx@xxxxx.xxx" required><br></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">How many people?:</td>
+        <td><input type="number" name="quantityPeople" id="quantityPeople" onblur="validatePeople()" placeholder="No more than 20" required><br></td>
+        <td class="numberPeople"><span id="peoplePrompt"></span></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">Check-in:</td>
+        <td><input type="date" name="checkIn" id="checkIn" placeholder="dd-mm-yyyy" onblur="validateCheckIn()" required pattern="\d{2}-\d{2}-\d{4}"><br></td>
+        <td class="date"><span id="checkInPrompt"></span></td>
+    </tr>
+
+    <tr class="trForm">
+        <td class="tdForm">Check-out:</td>
+        <td><input type="date" name="checkOut" id="checkOut" placeholder="dd-mm-yyyy" onblur="validateCheckOut()" required pattern="\d{2}-\d{2}-\d{4}"><br></td>
+        <td class="date"><span id="checkOutPrompt"></span></td>
+    </tr>
+    
+</table>
+
+<button type="reset" class="buttonClear" id="buttonClear">Clear</button>
+    <button class="buttonDone" id="buttonDone" onclick="validateForm()">Done</button>
+
+</form>
+
+<br>
+
+    <table class="mealHours">
+        <tr>
+            <td class="tdHours">Breakfast (7-10am)</td><td class="tdHours">Sandwich/Fruit/Waffle</td><td class="tdHours">Coffee/Mate/Te</td>
+        </tr>
+        <tr>
+            <td class="tdHours">Lunch (12-2pm)</td><td class="tdHours">Asado/Pasta/Empanadas</td><td class="tdHours">Beer/Wine/Other</td>
+        </tr>
+        <tr>
+            <td class="tdHours">Dinner (9-11pm)</td><td class="tdHours">Pasta/Salad/Milanesa</td><td class="tdHours">Beer/Wine/Other</td>
+        </tr>
+
+    </table>
+
+    <script type="text/javascript" src="test.js"></script>
+    <link rel="stylesheet" type="text/css" href="basic.css"
+    
+</body>
+</html>
